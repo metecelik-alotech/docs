@@ -3,21 +3,12 @@
   "theme": "almond",
   "name": "AloTech",
   "colors": {
-    "primary": "#F42A37",
+    "primary": "#EC0C1B",
     "light": "#F54298",
-    "dark": "#1A2852"
+    "dark": "#3F67D8"
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -35,8 +26,41 @@
     "products": [
       {
         "product": "CX Insights",
-        "pages": [
-          "introduction"
+        "groups": [
+          {
+            "group": "Başlarken",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "Modüller",
+            "pages": [
+              "cx-insights/dashboard",
+              "cx-insights/advanced-call-records",
+              "cx-insights/ai-call-review",
+              "cx-insights/ai-notifications",
+              "cx-insights/crm-integration",
+              "cx-insights/weekly-summary-email"
+            ]
+          },
+          {
+            "group": "Kurulum ve Yapılandırma",
+            "pages": [
+              "cx-insights/setup/creating-a-profile",
+              "cx-insights/setup/category-management",
+              "cx-insights/setup/notification-rules",
+              "cx-insights/setup/demo-and-licensing"
+            ]
+          },
+          {
+            "group": "Yetki ve Sınırlar",
+            "pages": [
+              "cx-insights/permissions",
+              "cx-insights/known-limitations",
+              "cx-insights/faq"
+            ]
+          }
         ]
       }
     ]
