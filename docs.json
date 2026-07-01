@@ -23,42 +23,47 @@
         }
       ]
     },
-    "products": [
+    "tabs": [
       {
-        "product": "CX Insights",
-        "groups": [
+        "tab": "CX Insights",
+        "products": [
           {
-            "group": "Başlarken",
-            "pages": [
-              "introduction"
-            ]
-          },
-          {
-            "group": "Ekranlar",
-            "pages": [
-              "cx-insights/dashboard",
-              "cx-insights/advanced-call-records",
-              "cx-insights/ai-call-review",
-              "cx-insights/ai-notifications",
-              "cx-insights/crm-integration",
-              "cx-insights/weekly-summary-email"
-            ]
-          },
-          {
-            "group": "Kurulum ve Yapılandırma",
-            "pages": [
-              "cx-insights/setup/creating-a-profile",
-              "cx-insights/setup/category-management",
-              "cx-insights/setup/notification-rules",
-              "cx-insights/setup/demo-and-licensing"
-            ]
-          },
-          {
-            "group": "Yetki ve Sınırlar",
-            "pages": [
-              "cx-insights/permissions",
-              "cx-insights/known-limitations",
-              "cx-insights/faq"
+            "product": "CX Insights",
+            "groups": [
+              {
+                "group": "Başlarken",
+                "pages": [
+                  "introduction"
+                ]
+              },
+              {
+                "group": "Ekranlar",
+                "pages": [
+                  "cx-insights/dashboard",
+                  "cx-insights/advanced-call-records",
+                  "cx-insights/ai-call-review",
+                  "cx-insights/ai-notifications",
+                  "cx-insights/crm-integration",
+                  "cx-insights/weekly-summary-email"
+                ]
+              },
+              {
+                "group": "Kurulum ve Yapılandırma",
+                "pages": [
+                  "cx-insights/setup/creating-a-profile",
+                  "cx-insights/setup/category-management",
+                  "cx-insights/setup/notification-rules",
+                  "cx-insights/setup/demo-and-licensing"
+                ]
+              },
+              {
+                "group": "Yetki ve Sınırlar",
+                "pages": [
+                  "cx-insights/permissions",
+                  "cx-insights/known-limitations",
+                  "cx-insights/faq"
+                ]
+              }
             ]
           }
         ]
