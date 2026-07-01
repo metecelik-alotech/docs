@@ -2,41 +2,141 @@
 title: "Dashboard"
 ---
 
-Dashboard, seçtiğiniz tarih aralığındaki tüm çağrı ve chat etkileşimlerinin yapay zeka tarafından nasıl analiz edildiğini tek ekranda özetler. Çağrı merkezinizin genel sağlığını, en çok konuşulan konuları ve müşteri memnuniyetinin seyrini buradan takip edersiniz.
+Dashboard, çağrı merkezinizde o gün (veya seçtiğiniz tarih aralığında) neler yaşandığını tek ekranda özetler. Binlerce çağrı ve chat'i tek tek dinlemeniz/okumanıza gerek kalmadan; yapay zeka bunların hepsini sizin için dinler, hangi konudan bahsedildiğini, sorunun çözülüp çözülmediğini ve müşterinin ne hissettiğini otomatik olarak çıkarır ve burada raporlar.
 
 <Frame>
   ![CX Insights Dashboard ekranı: üstte analiz edilen çağrı/chat sayısı, çözüm oranı ve duygu skoru özet kartları; altta kategori bazlı etkileşim tablosu ve etkileşim kategori dağılımını gösteren halka grafik](/images/cx-insights-dashboard-overview.png)
 </Frame>
 
-<Info>
-  Bu sayfa modül modül detaylandırılacak — aşağıdaki bölümler ilk görsele göre yazıldı, ilerleyen görsellerle birlikte genişletilecek.
-</Info>
+<Tip>
+  Sayfayı yukarıdan aşağı okurken şu sırayı takip etmenizi öneririz: önce **Özet Kartları** ile genel tabloya bakın, sonra **Etkileşim Kategorileri** ile hangi konuların öne çıktığını görün, en sonda **Tarih Bazlı** grafikle bunların güne göre nasıl dağıldığını inceleyin.
+</Tip>
+
+<Note>
+  Bu sayfada birçok yerde **Belirsiz** etiketini göreceksiniz. Bu, yapay zekanın o etkileşim için net bir "çözüldü/çözülmedi" veya "olumlu/olumsuz" kararı verecek yeterli bilgi bulamadığı durumları ifade eder — bir hata değildir, sadece görüşmenin belirsiz kalan kısmıdır.
+</Note>
 
 ## Özet Kartları
 
-Ekranın en üstünde dört metrik kart yer alır:
+Ekranın en üstünde, döneme ait dört temel rakamı gösteren kartlar yer alır:
 
-- **Analiz Edilen Çağrılar** — seçilen tarih aralığında yapay zeka tarafından analiz edilmiş toplam çağrı sayısı
-- **Analiz Edilen Chatler** — aynı aralıkta analiz edilmiş toplam chat sayısı
-- **Çözüm Sağlandı (Evet Oranı %)** — "çözüldü" olarak işaretlenen etkileşimlerin yüzdesi
-- **Belirleyici Olumlu Duygu Skoru** — olumlu duygu durumuyla sonuçlanan etkileşimlerin yüzdesi
+<CardGroup cols={2}>
+  <Card title="Analiz Edilen Çağrılar" icon="phone">
+    Seçilen tarih aralığında yapay zeka tarafından dinlenip analiz edilmiş toplam çağrı sayısı.
+  </Card>
+  <Card title="Analiz Edilen Chatler" icon="comment-dots">
+    Aynı aralıkta okunup analiz edilmiş toplam yazılı chat sayısı.
+  </Card>
+  <Card title="Çözüm Sağlandı (Evet Oranı %)" icon="circle-check">
+    Müşterinin sorununun görüşme bitmeden çözüldüğü etkileşimlerin yüzdesi.
+  </Card>
+  <Card title="Belirleyici Olumlu Duygu Skoru" icon="face-smile">
+    Müşterinin olumlu bir duygu durumuyla ayrıldığı etkileşimlerin yüzdesi — kısaca, görüşmelerin ne kadarı müşteriyi "iyi hissettirerek" bitiyor.
+  </Card>
+</CardGroup>
+
+Bu dört sayı, çağrı merkezinizin o dönemki genel nabzını verir. Herhangi birinde beklenmedik bir düşüş görürseniz, aşağıdaki bölümler o düşüşün hangi konudan ve hangi saatlerden kaynaklandığını anlamanıza yardımcı olur.
 
 ## Etkileşim Kategorileri
+
+Özet kartlarının hemen altında, o dönemde konuşulan konuların döküldüğü bir tablo bulunur. Yapay zeka her çağrı ve chat'i otomatik olarak bir konuya (kategoriye) yerleştirir — siz hiçbir şeyi elle etiketlemezsiniz.
 
 <Frame>
   ![Etkileşim Kategorileri tablosunun yakın çekim görünümü: kategori ve alt kategori sayısı rozetleri, Tüm Etkileşimler/Çözüm Sağlandı/Duygu Durumu filtre sekmeleri ve kategori bazlı çağrı/chat/çözüm/duygu sütunları](/images/cx-insights-dashboard-etkilesim-kategorileri.png)
 </Frame>
 
-Sol taraftaki tablo, tespit edilen ana kategorileri satır satır listeler. Tablonun üstünde toplam **Kategori** ve **Alt Kategori** sayısını gösteren rozetler bulunur; her satırın solundaki ok simgesi o kategorinin alt kategorilerini açar.
+Tablonun üstündeki **Kategori** ve **Alt Kategori** rozetleri, o dönemde kaç farklı ana konu ve kaç alt konu tespit edildiğini gösterir. Her satır bir ana kategoriyi temsil eder ve şu bilgileri taşır:
 
-Üç filtre sekmesiyle görünümü değiştirebilirsiniz:
+| Sütun | Ne anlatır? |
+| --- | --- |
+| Kategori adı | Yapay zekanın bu grup için bulduğu konu başlığı (örn. "Sipariş") |
+| Çağrı Sayısı / Chat Sayısı | Bu konuyla ilgili kaç çağrı ve kaç chat geldiği |
+| Tüm Etkileşimler (%) | Bu konunun seçilen dönemdeki tüm etkileşimler içindeki payı |
+| Çözüm Sağlandı | Bu konudaki görüşmelerin ne kadarının çözümle sonuçlandığı |
+| Duygu Durumu | Bu konudaki görüşmelerde ortalama müşteri duygusu |
 
-- **Tüm Etkileşimler** — varsayılan görünüm
-- **Çözüm Sağlandı** — yalnızca çözüm durumuna göre kırılım
-- **Duygu Durumu** — yalnızca duygu durumuna göre kırılım
+Tablonun üstündeki üç sekme ile görünümü değiştirebilirsiniz — **Tüm Etkileşimler** varsayılan sıralamayı gösterirken, **Çözüm Sağlandı** ve **Duygu Durumu** sekmeleri tabloyu o metriğe göre yeniden sıralar.
 
-Tablo sütunları: Kategori adı, Çağrı Sayısı, Chat Sayısı, Tüm Etkileşimler içindeki yüzdesi, Çözüm Sağlandı oranı ve Duygu Durumu oranı.
+### Alt Kategori Kırılımı
+
+<Frame>
+  ![Etkileşim Kategorileri tablosunda "Sipariş" ana kategorisinin açılmış görünümü: İptal, Teslimat, İade, Durum, Gecikme, Eksik, Sipariş Notu, Bilgi ve Konum alt kategorileri, her biri kendi çağrı sayısı, oran, çözüm ve duygu durumu değerleriyle listeleniyor](/images/cx-insights-dashboard-alt-kategori-kirilimi.png)
+</Frame>
+
+Bir kategori satırın gerçek hikayesi çoğu zaman alt kategorilerde gizlidir. Satırın solundaki ok simgesine tıkladığınızda, o kategoriye bağlı tüm alt konular aynı sütunlarla (Çağrı Sayısı, Tüm Etkileşimler %, Çözüm Sağlandı, Duygu Durumu) tablonun altında açılır.
+
+<Tip>
+  "Sipariş" kategorisi çok çağrı alıyor diye genel bir aksiyon almadan önce alt kategorilere bakın. Belki de asıl sorun kategorinin tamamı değil, sadece **Gecikme** veya **İptal** alt konusudur — çözümü de o zaman çok daha nettir.
+</Tip>
 
 ## Etkileşim Kategori Dağılımı
 
-Sağ taraftaki halka grafik, toplam etkileşim sayısını merkezde göstererek kategorilerin birbirine oranını görselleştirir — hangi kategorinin hacmin büyük kısmını oluşturduğunu tek bakışta anlamanızı sağlar.
+Tablonun sağındaki halka grafik, aynı kategorileri bu sefer görsel olarak özetler: toplam etkileşim sayısı merkezde yazılıdır, dilimlerin büyüklüğü ise her kategorinin bu toplam içindeki payını gösterir. Tabloyu okumaya vaktiniz yoksa, hangi konunun hacmin büyük kısmını oluşturduğunu bu grafikten tek bakışta anlayabilirsiniz.
+
+## Kategori Bulutu ve Genel Oranlar
+
+Dashboard'un bir alt bölümü, aynı veriyi farklı bir açıdan gösteren üç widget'tan oluşur.
+
+<Frame>
+  ![Dashboard'un alt bölümü: solda konu başlıklarını sıklıklarına göre farklı boyut ve renklerde gösteren Kategori Bulut widget'ı, sağda Çözüm Sağlandı (Evet/Hayır/Belirsiz) ve Duygu Durumu Analizi (Negatif/Nötr/Belirsiz/Pozitif) halka grafikleri](/images/cx-insights-dashboard-kategori-bulut-ve-oranlar.png)
+</Frame>
+
+### Kategori Bulut
+
+Konuşulan konuları, kelimelerin büyüklüğüyle bir "bulut" halinde gösterir — bir kelime ne kadar sık geçiyorsa o kadar büyük ve göze çarpar. Yoğun aylarda tabloya girmeden, sadece göz gezdirerek "bu dönem herkes neden bahsediyor" sorusuna hızlı bir cevap almak için idealdir.
+
+### Çözüm Sağlandı ve Duygu Durumu Analizi
+
+Bu iki halka grafik, Özet Kartları'ndaki "Çözüm Sağlandı" ve "Belirleyici Olumlu Duygu Skoru" rakamlarının **tam kırılımını** verir:
+
+- **Çözüm Sağlandı** — etkileşimleri Evet (çözüldü), Hayır (çözülmedi) ve Belirsiz olarak ayırır, her birinin sayısını ve yüzdesini gösterir.
+- **Duygu Durumu Analizi** — aynı etkileşimleri Pozitif, Negatif, Nötr ve Belirsiz olarak ayırır.
+
+Örneğin özet karttaki "%84,76 çözüldü" rakamının arkasında kaç görüşme olduğunu, ya da olumsuz duygunun ne kadarının gerçekten "Negatif" mi yoksa sadece "Nötr" mü olduğunu buradan görebilirsiniz.
+
+## Tarih Bazlı Sonuca Ulaşım ve Duygu Durumu
+
+Yukarıdaki tüm widget'lar seçilen dönemin **toplamını** gösterir; bu grafik ise aynı verinin **gün içinde saatlere göre nasıl değiştiğini** gösterir.
+
+<Frame>
+  ![Tarih Bazlı Sonuca Ulaşım ve Duygu Durumu grafiği: gün içindeki saat dilimlerine göre etkileşim hacmini, her saat diliminde yan yana Çözüm Sağlandı (Evet/Hayır/Belirsiz) ve Duygu Durumu (Pozitif/Negatif/Nötr/Belirsiz) kırılımlarını gösteren çift gruplu sütun grafiği](/images/cx-insights-dashboard-tarih-bazli-sonuc-duygu.png)
+</Frame>
+
+Her saat dilimi için iki sütun kümesi yan yana çizilir — biri o saatteki **Çözüm Sağlandı** kırılımını, diğeri **Duygu Durumu** kırılımını gösterir. Grafiğin altındaki etiketlere tıklayarak istediğiniz kategoriyi grafikten gizleyip gösterebilirsiniz.
+
+<Tip>
+  Örnek grafikte etkileşim hacmi gece 02:00-08:00 arasında en düşük, akşam 18:00-21:00 arasında ise zirvede. Kendi verinizde de benzer bir yoğunluk saati görüyorsanız, ekip planlamasında bu saatleri önceliklendirmeniz işe yarayabilir.
+</Tip>
+
+### Saat Dilimi Detayı
+
+Herhangi bir saat dilimindeki çubuğun üzerine gelmeniz yeterli — o saate ait tüm detayları içeren bir kutu açılır.
+
+<Frame>
+  ![Bir saat dilimi çubuğunun üzerine gelindiğinde açılan detay kutusu: Çağrı Tipi (Çağrı/Chat sayı ve yüzde), Çözüm (Evet/Hayır/Belirsiz sayı ve yüzde) ve Duygu Durumu (Pozitif/Negatif/Nötr sayı ve yüzde) kırılımlarını gösteren tooltip](/images/cx-insights-dashboard-tarih-bazli-tooltip-detay.png)
+</Frame>
+
+Bu kutu üç grup bilgi taşır:
+
+- **Çağrı Tipi** — o saatteki etkileşimlerin kaçının çağrı, kaçının chat olduğu
+- **Çözüm** — Evet / Hayır / Belirsiz kırılımı
+- **Duygu Durumu** — Pozitif / Negatif / Nötr / Belirsiz kırılımı
+
+Böylece "akşam 18:00-19:00'da neden hem hacim hem de olumsuz duygu oranı yüksek" gibi bir soruyu, grafikten çıkmadan tek bir saat dilimine bakarak yanıtlayabilirsiniz.
+
+---
+
+<AccordionGroup>
+  <Accordion title="Kategori / Alt Kategori nedir?">
+    Yapay zekanın her çağrı ve chat'i içeriğine göre otomatik gruplandırdığı konu başlıklarıdır. Ana kategori genel konuyu ("Sipariş"), alt kategori ise o konunun daha spesifik bir yönünü ("İptal", "Gecikme") temsil eder. Bunları siz tanımlamazsınız; yapay zeka görüşme metninden çıkarır.
+  </Accordion>
+  <Accordion title="Çözüm Sağlandı ne anlama gelir?">
+    Yapay zekanın, görüşme sonunda müşterinin sorununun çözülüp çözülmediğine dair verdiği karardır: Evet, Hayır veya Belirsiz.
+  </Accordion>
+  <Accordion title="Duygu Durumu nasıl belirleniyor?">
+    Yapay zeka, müşterinin konuşma/yazışma tonundan ve kullandığı kelimelerden görüşmenin genel duygusunu çıkarır: Pozitif, Negatif, Nötr veya Belirsiz.
+  </Accordion>
+  <Accordion title="Bu skorlar nasıl hesaplanıyor, hangi yapay zeka bunu yapıyor?">
+    Sürecin tamamı — transkripsiyon, analiz ve raporlama — [Giriş sayfasındaki "Nasıl Çalışır?" bölümünde](/introduction) adım adım anlatılıyor.
+  </Accordion>
+</AccordionGroup>
